@@ -1,0 +1,61 @@
+div.sm-jumbotron{
+    margin: 0px;
+    padding: 2rem;
+    background: linear-gradient(90deg, rgba(160,207,65,1) 0%, rgba(101,195,67,1) 35%, rgba(176,227,141,1) 56%, rgba(34,136,24,1) 98%);
+
+    border-style: solid;
+    border-color: white;
+}
+div.col{
+    width: 100%;
+
+}
+
+
+button.btn-submit{
+    background-color: #b3ed87;
+    color: #3c4238;
+    width: 100%;
+    border-radius: 50px;
+    font-size:1.6rem;
+    width: 35%;
+}
+button.btn-submit:focus,button.btn-submit:hover{
+    background-color: #98fc4c;
+}
+/* body{
+    background-color: royalblue;
+} */
+
+.backg{
+  height:100vh;
+  width: 100%;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Login{
+    height: 25%;
+    width: 35%;
+    margin-top: 50px;
+}
+
+.titleColor{
+  color:white;
+}
+
+.box{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.btnCenter{
+  display: flex;
+  justify-content: center;
+}
+
+.forgot:hover{
+    color: #4f22f2;
+}

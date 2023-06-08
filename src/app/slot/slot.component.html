@@ -1,0 +1,53 @@
+<div id="slotpage">
+    <div>
+        <button kendoButton id="LogO" (click)="logOut()" >LoggedOut</button>
+        
+    </div>
+    <h3 style="color:azure">Book Your Slots For Tomorrow </h3>
+    <table>
+        <tr>
+        <td><button kendoButton (click)="onButtonClick(0)" id="slotselect" fillMode="outline" [disabled] = available[0]>00:00 - 01:00</button></td>
+        <td><button kendoButton (click)="onButtonClick(1)" id="slotselect" fillMode="outline" [disabled] = available[1]>01:00 - 02:00</button></td>
+        <td><button kendoButton (click)="onButtonClick(2)" id="slotselect" fillMode="outline" [disabled] = available[2]>02:00 - 03:00</button></td>
+        <td><button kendoButton (click)="onButtonClick(3)" id="slotselect" fillMode="outline" [disabled] = available[3]>03:00 - 04:00</button></td>
+        <td><button kendoButton (click)="onButtonClick(4)" id="slotselect" fillMode="outline" [disabled] = available[4]>04:00 - 05:00</button></td>
+        <td><button kendoButton (click)="onButtonClick(5)" id="slotselect" fillMode="outline" [disabled] = available[5]>05:00 - 06:00</button></td>
+        </tr>
+        <tr>
+            <td><button kendoButton (click)="onButtonClick(6)" id="slotselect" fillMode="outline" [disabled] = available[6]>06:00 - 07:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(7)" id="slotselect" fillMode="outline" [disabled] = available[7]>07:00 - 08:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(8)" id="slotselect" fillMode="outline" [disabled] = available[8]>08:00 - 09:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(9)" id="slotselect" fillMode="outline" [disabled] =available[9]>09:00 - 10:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(10)" id="slotselect" fillMode="outline" [disabled]=available[10]>10:00 - 11:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(11)" id="slotselect" fillMode="outline" [disabled]=available[11]>11:00 - 12:00</button></td>
+        </tr>
+        <tr>
+            <td><button kendoButton (click)="onButtonClick(12)" id="slotselect" fillMode="outline" [disabled]=available[12]>12:00 - 13:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(13)" id="slotselect" fillMode="outline" [disabled]=available[13]>13:00 - 14:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(14)" id="slotselect" fillMode="outline" [disabled]=available[14]>14:00 - 15:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(15)" id="slotselect" fillMode="outline" [disabled]=available[15]>15:00 - 16:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(16)" id="slotselect" fillMode="outline" [disabled]=available[16]>16:00 - 17:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(17)" id="slotselect" fillMode="outline" [disabled]=available[17]>17:00 - 18:00</button></td>
+        </tr>
+        <tr>
+            <td><button kendoButton (click)="onButtonClick(18)" id="slotselect" fillMode="outline" [disabled]=available[18]>18:00 - 19:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(19)" id="slotselect" fillMode="outline" [disabled]=available[19]>19:00 - 20:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(20)" id="slotselect" fillMode="outline" [disabled]=available[20]>20:00 - 21:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(21)" id="slotselect" fillMode="outline" [disabled]=available[21]>21:00 - 22:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(22)" id="slotselect" fillMode="outline" [disabled]=available[22]>22:00 - 23:00</button></td>
+            <td><button kendoButton (click)="onButtonClick(23)" id="slotselect" fillMode="outline" [disabled]=available[23]>23:00 - 24:00</button></td>
+        </tr>
+    </table>
+
+    <div id="selectedSlot">
+        <h3> Your Booked Slots are :-</h3>
+        <div id="payment">
+            <div *ngIf="bookedslot.length == 0" style="color: red;">Slots Are Not Selected</div>
+            <ng-container *ngFor="let item of bookedslot">
+                <div>{{item.SlotName}}...................1500₹ <button type="submit" (click)="DeleteThisSlot(item.slotI)">Delete Slot</button> </div>
+            </ng-container>
+            -------------------------------------------------
+            <div>Total Amount..................{{TotalBill}}₹</div>
+            <button style="margin-left: 45px;" kendoButton (click)="bookselectedslot()" fillMode="outline">Book This Slots</button>
+        </div>
+</div>
