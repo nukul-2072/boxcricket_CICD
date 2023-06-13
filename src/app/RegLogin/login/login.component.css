@@ -11,6 +11,13 @@ div.col{
 
 }
 
+.backg{
+  height:100vh;
+  width: 100%;
+  background-image: url('../../../Images/cricketer-field-action.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 button.btn-submit{
     background-color: #b3ed87;
