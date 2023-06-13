@@ -6,7 +6,7 @@ import { slotforbooking } from './slotmodel';
   providedIn: 'root'
 })
 export class SlotservService {
-  readonly rootUrl = 'https://localhost:44303/api/Slot/';
+  readonly rootUrl = 'https://localhost:44385/api/Slot/';
   constructor(private http: HttpClient) { }
 
   GetSlots() {
