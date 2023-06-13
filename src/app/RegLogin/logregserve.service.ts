@@ -7,7 +7,7 @@ import { Userreg } from './register/regmodel';
 }
 )
 export class LogregserveService {
-  readonly rootUrl = 'https://localhost:44303/api/Login/';
+  readonly rootUrl = 'https://localhost:44385/api/Login/';
   constructor(private http: HttpClient) { }
 
   login(logg:User){
